@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.sitefooter
+{
+    position: fixed;  
+    width: 100%;  
+    bottom: 2px;
+    background-color: gray;  
+    color: black;  
+    text-align: center; 
+    background-color:rgba(79, 79, 1, 0.203);
+}
+
+
+.tbl {
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  width:100%;
+  border-collapse:collapse;
+}
+.tbl td, .tbl th {
+  font-size:1em;
+  border:1px solid #98bf21;
+  padding:3px 7px 2px 7px;
+}
+.tbl th {
+  font-size:1.1em;
+  text-align:left;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color:#A7C942;
+  color:#ffffff;
+}
+.tbl tbody tr:nth-child(even) td {
+  color:#000000;
+  background-color:#EAF2D3;
 }
