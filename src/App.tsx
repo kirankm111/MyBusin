@@ -20,6 +20,7 @@ function App() {
     printOrderModel.OrderDetails.push(orderDetails);
   return (
     <div className="App">
+              <BrowserRouter>
         <Header></Header>
         <div className="" style={{marginBottom:"3%",marginLeft:"2%",marginRight:"2%"}}>
      {/* <AppRoutes></AppRoutes> */}
@@ -31,6 +32,7 @@ function App() {
       </div>
       
       <Footer></Footer> 
+      </BrowserRouter>
     </div>
   );
 }
