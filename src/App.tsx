@@ -9,9 +9,10 @@ import { SaleItems } from './Components/SaleItems/SaleItems';
 import PrintSale from './Components/Sales/Print';
 import { PrintOrder } from './Models/PrintOrder';
 import { OrderDetails } from './Models/OrderDetails';
-import AppRoutes from './Routes/Routes';
-import { Outlet } from 'react-router-dom';
-
+import { Outlet,  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Purchase } from './Components/Purchases/Pruchase';
+import { SalesList } from './Components/SalesList/SalesList';
 function App() {
   let printOrderModel:PrintOrder= { } as PrintOrder;
   printOrderModel.OrderDetails=[];
@@ -19,21 +20,21 @@ function App() {
     HCNCode:"",ItemDescription:"",Rate:0,SGSTRate:0,ItemId:0,TaxableValue:0,TotalPrice:0} as OrderDetails;
     printOrderModel.OrderDetails.push(orderDetails);
   return (
-    <div className="App">
-              <BrowserRouter>
-        <Header></Header>
-        <div className="" style={{marginBottom:"3%",marginLeft:"2%",marginRight:"2%"}}>
-     {/* <AppRoutes></AppRoutes> */}
-      {/* <PrintSale printOrder={printOrderModel} ></PrintSale> */}
-      {/* <Customers></Customers> */}
-      {/* <SaleItems></SaleItems> */}
-      <Outlet></Outlet>
-      {/* <AppRoutes></AppRoutes> */}
-      </div>
-      
-      <Footer></Footer> 
-      </BrowserRouter>
-    </div>
+    
+     <div className="App">
+      <BrowserRouter>
+       <Header></Header>
+       <div className="" style={{marginBottom:"3%",marginLeft:"2%",marginRight:"2%"}}>
+        <Routes>
+       <Route index path="/"  element={<Sale/>} />
+       <Route path="/Customers" element={<Customers/>} />
+       <Route path="/SaleItems" element={<SaleItems/>} />
+       <Route path="/Purchase" element={<Purchase/>} />
+       <Route path="/SaleList" element={<SalesList/>} />
+       </Routes>
+       </div>
+       </BrowserRouter>
+     </div>
   );
 }
 
