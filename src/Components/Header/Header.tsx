@@ -19,9 +19,10 @@ function Header() {
       </a>
       <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
         <li><Link className="dropdown-item" to="/">Home</Link></li>
+        <li><Link className="dropdown-item" to="/Customers">Customers</Link></li>
         <li><Link className="dropdown-item" to="/SaleItems">Sale Items</Link></li>
-        <li><Link className="dropdown-item" to="/Purchases">Purchases</Link></li>
-        <li><Link className="dropdown-item" to="/Sales">Sales</Link></li>
+        <li><Link className="dropdown-item" to="/Purchases">Raw Meterial Purchases</Link></li>
+        <li><Link className="dropdown-item" to="/SalesList">Sales List</Link></li>
       </ul>
     </li>
   </ul>
