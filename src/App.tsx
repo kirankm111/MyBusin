@@ -14,11 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Purchase } from './Components/Purchases/Pruchase';
 import { SalesList } from './Components/SalesList/SalesList';
 function App() {
-  let printOrderModel:PrintOrder= { } as PrintOrder;
-  printOrderModel.OrderDetails=[];
-  let orderDetails= {Id:0,CGSTAmmount:0,Qunatity:0,SGSTAmmount:0,CGSTRate:0,
-    HCNCode:"",ItemDescription:"",Rate:0,SGSTRate:0,ItemId:0,TaxableValue:0,TotalPrice:0} as OrderDetails;
-    printOrderModel.OrderDetails.push(orderDetails);
+  
   return (
     
      <div className="App">
